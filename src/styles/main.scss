@@ -1,0 +1,31 @@
+@use "./abstracts/mixin";
+@use "./abstracts/variables";
+
+@use "./base/fonts";
+@use "./base/typography";
+@use "./base/base";
+
+@use "./layout/container";
+@use "./layout/section";
+@use "./layout/grid";
+
+// Dark Theme
+:root {
+  --color-primary: #fef1e7;
+  --color-secondary: #ffffff;
+  --color-black: #100e21;
+
+  --color-text-primary: #117465;
+  --color-text-secondary: #080710;
+  --color-text-muted: #525157;
+}
+
+[data-theme="dark"] {
+  --color-primary: #100e21;
+  --color-secondary: #1a1b22;
+  --color-black: #ffffff;
+
+  --color-text-primary: #fef1e7;
+  --color-text-secondary: #f0f0f0;
+  --color-text-muted: #a5a5a5;
+}

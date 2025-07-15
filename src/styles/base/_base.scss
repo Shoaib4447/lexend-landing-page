@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 1.6;
+}

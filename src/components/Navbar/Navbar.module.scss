@@ -1,0 +1,69 @@
+@use "../../styles/abstracts/mixin" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.navContainer {
+  padding: $spacing-sm;
+  background-color: $color-primary;
+  position: relative;
+  z-index: 100;
+}
+.mobileMenu {
+  display: none;
+
+  @include respond(sm) {
+    @include flex-between;
+    width: 100%;
+    padding: $spacing-sm $spacing-md;
+  }
+}
+/* 💻 Desktop Navigation (hidden on small screens) */
+.desktopOnly {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(sm) {
+    display: none;
+  }
+}
+
+.navLinks {
+  display: flex;
+  gap: $spacing-lg;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    color: $color-text-primary;
+    font-weight: 500;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-text-secondary;
+    }
+  }
+}
+
+.navActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+
+  button {
+    background: $color-text-primary;
+    color: $color-text-secondary;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: $spacing-sm;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+}

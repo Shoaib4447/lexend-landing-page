@@ -1,0 +1,23 @@
+// 🎨 Colors using CSS custom properties
+
+// Colors
+$color-primary: var(--color-primary);
+$color-secondary: var(--color-secondary);
+$color-black: var(--color-black);
+// Text Colors
+$color-text-primary: var(--color-text-primary);
+$color-text-secondary: var(--color-text-secondary);
+$color-text-muted: var(--color-text-muted);
+
+// 🧱 Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 48px;
+
+// 🔤 Typography
+$font-heading: "PolySans", sans-serif;
+$font-body: "Mabry Pro", sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.6;

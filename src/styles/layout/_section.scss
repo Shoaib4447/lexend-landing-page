@@ -1,0 +1,11 @@
+@use "../abstracts/mixin" as *;
+
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  @include respond(md) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
