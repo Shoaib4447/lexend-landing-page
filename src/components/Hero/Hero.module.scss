@@ -2,12 +2,77 @@
 @use "../../styles/abstracts/variables" as *;
 
 .hero {
-  padding: 4rem 2rem;
+  min-height: 90vh;
+  padding: 2rem;
   background-color: $color-primary;
-  color: $color-text-primary;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
   h1 {
-    font-size: 2.5rem;
     font-family: $font-heading;
   }
+
+  @include respond(sm) {
+    min-height: 10vh;
+  }
+}
+
+.heroText {
+  font-family: $font-heading;
+  font-size: 70px;
+
+  @include respond(sm) {
+    font-size: 35px;
+  }
+  span {
+    color: $color-text-primary;
+    font-weight: bold;
+  }
+
+  .mainHeading {
+    color: $color-black;
+  }
+}
+
+.description {
+  font-family: $font-size-base;
+  font-size: 20px;
+}
+
+.heroCtaButtons {
+  @include flex-between;
+  gap: 20px;
+
+  @include respond(sm) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.cta {
+  padding: 10px 20px;
+  border: 2px solid $color-text-primary;
+  border-radius: 7px;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 15px;
+  color: $color-text-primary;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ctaIcon {
+  color: $color-black;
+}
+.demo {
+  padding: $spacing-sm;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 15px;
+  color: $color-text-primary;
 }

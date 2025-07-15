@@ -6,9 +6,16 @@
   justify-content: center;
   align-items: center;
 }
-// 🔁 Flex center shortcut
+// 🔁 Flex between shortcut
 @mixin flex-between {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+// 🔁 Flex column shortcut
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
