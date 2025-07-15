@@ -2,7 +2,7 @@
 @use "../../styles/abstracts/variables" as *;
 
 .navContainer {
-  padding: $spacing-sm;
+  padding: $spacing-md;
   background-color: $color-primary;
   position: relative;
   z-index: 100;
@@ -16,7 +16,6 @@
     padding: $spacing-sm $spacing-md;
   }
 }
-/* 💻 Desktop Navigation (hidden on small screens) */
 .desktopOnly {
   display: flex;
   justify-content: space-between;
@@ -31,20 +30,34 @@
   display: flex;
   gap: $spacing-lg;
   list-style: none;
-  padding: 0;
-  margin: 0;
+
+  @include respond(sm) {
+    background-color: $color-primary;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    font-size: 20px;
+    padding: 0 $spacing-lg;
+  }
 
   a {
     text-decoration: none;
-    color: $color-text-primary;
-    font-weight: 500;
+    color: $color-black;
+    font-weight: bolder;
     transition: color 0.2s;
 
     &:hover {
-      color: $color-text-secondary;
+      color: $color-text-muted;
     }
   }
 }
+
+// .active {
+//   max-height: 500px;
+//   opacity: 1;
+//   visibility: visible;
+// }
 
 .navActions {
   display: flex;
@@ -58,12 +71,20 @@
 
   button {
     background: $color-text-primary;
-    color: $color-text-secondary;
+    color: $color-secondary;
     border: none;
     font-size: 1rem;
     cursor: pointer;
-    padding: $spacing-sm;
+    padding: $spacing-sm $spacing-md;
     border-radius: 10px;
     font-weight: bold;
   }
+}
+
+.menuToggle {
+  padding: $spacing-md;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  color: $color-text-primary;
 }

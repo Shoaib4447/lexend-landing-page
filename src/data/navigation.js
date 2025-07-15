@@ -7,6 +7,6 @@ export const navigation = {
     { label: "About", href: "#about" },
   ],
   buttons: {
-    login: { label: "Download App", href: "/Downloadapp" }, 
+    download: { label: "Download App", href: "/Downloadapp" },
   },
 };
