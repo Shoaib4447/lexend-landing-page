@@ -1,27 +1,16 @@
+import { HiOutlineLightningBolt } from "react-icons/hi";
+import { LuDatabase } from "react-icons/lu";
+import { MdOutlineLightbulbCircle } from "react-icons/md";
+import { TbTargetArrow } from "react-icons/tb";
+import { RiEqualizer2Line } from "react-icons/ri";
+
 export const features = [
   {
-    icon: "/icons/fast.svg",
+    Icon: HiOutlineLightningBolt,
     title: "Fast Messaging",
-    description: "Real-time communication with no delays.",
   },
-  {
-    icon: "/icons/ai.svg",
-    title: "AI‑Powered Translation",
-    description: "Translate chats instantly across languages.",
-  },
-  {
-    icon: "/icons/files.svg",
-    title: "Smart File Sharing",
-    description: "Easily share and preview files in chat.",
-  },
-  {
-    icon: "/icons/collab.svg",
-    title: "Team Collaboration",
-    description: "Work together with shared docs and threads.",
-  },
-  {
-    icon: "/icons/privacy.svg",
-    title: "Privacy Controls",
-    description: "You control your data and access.",
-  },
+  { Icon: LuDatabase, title: "AI‑Powered Translation" },
+  { Icon: MdOutlineLightbulbCircle, title: "Smart File Sharing" },
+  { Icon: TbTargetArrow, title: "Collaboration Tools" },
+  { Icon: RiEqualizer2Line, title: "Customize Privacy" },
 ];

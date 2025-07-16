@@ -1,0 +1,56 @@
+@use "../../styles/abstracts/mixin" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.moreFeaturesSection {
+  //   margin: 0px 40px;
+  padding: 4rem 0.5rem;
+
+  .heading {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    @include respond(sm) {
+      font-size: 45px;
+    }
+  }
+
+  .featureContainer {
+    @include flex-center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 20px;
+
+    .feature {
+      @include flex-center;
+      background-color: $color-primary;
+      gap: 10px;
+      width: 27%;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      margin: 10px;
+
+      @include respond(sm) {
+        width: 100%;
+        padding: 1rem 0.5rem;
+      }
+
+      &:hover {
+        scale: 105%;
+        transition: 0.2s ease-in-out;
+        background-color: rgb(219, 253, 169);
+      }
+
+      .iconCircle {
+        @include flex-center;
+        height: 45px;
+        width: 45px;
+        background-color: $color-text-primary;
+        border-radius: 50px;
+      }
+      .Icon {
+        color: $color-secondary;
+        font-size: 25px;
+      }
+    }
+  }
+}

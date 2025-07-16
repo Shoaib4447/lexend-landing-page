@@ -1,0 +1,89 @@
+@use "../../styles/abstracts/mixin" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.aboutSection {
+  padding: 3rem 11rem;
+
+  @include respond(md) {
+    padding: 3rem 4rem;
+  }
+
+  @include respond(sm) {
+    padding: 2rem 1.5rem;
+  }
+
+  .aboutRow {
+    @include flex-center;
+    flex-direction: column;
+    gap: 30px;
+
+    .interLockImg {
+      width: 15%;
+
+      @include respond(sm) {
+        width: 45%;
+      }
+    }
+
+    .aboutPersonDiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+
+      @include respond(sm) {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .ceoImgDiv {
+        display: flex;
+        justify-content: center;
+
+        .aboutPersonImg {
+          width: 40%;
+          border-radius: 80%;
+
+          @include respond(sm) {
+            width: 60%;
+          }
+        }
+      }
+
+      .ceoContentDiv {
+        margin-left: -25px;
+
+        @include respond(sm) {
+          margin-left: 0;
+          text-align: center;
+        }
+
+        .sarahEdriss {
+          font-size: $font-heading;
+
+          @include respond(sm) {
+            font-size: 1.25rem;
+          }
+        }
+
+        .leadMarketing {
+          font-size: $font-size-base;
+
+          @include respond(sm) {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+
+    .desc {
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+
+      @include respond(sm) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
