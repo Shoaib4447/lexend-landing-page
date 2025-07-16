@@ -14,6 +14,7 @@ const App = () => {
       <Preview />
       <Process />
       <Feature />
+      <About />
     </>
   );
 };

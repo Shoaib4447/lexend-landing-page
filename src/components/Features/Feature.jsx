@@ -2,10 +2,10 @@ import styles from "./Feature.module.scss";
 import FeatureComponent from "./FeatureCompnent";
 import { TbMessage } from "react-icons/tb";
 import { FaShieldHalved } from "react-icons/fa6";
-import { MdOutlineVideoCall } from "react-icons/md";
+import { MdOutlineVideoCall, MdOutlineMarkUnreadChatAlt } from "react-icons/md";
 import { TfiReload } from "react-icons/tfi";
-
 import images from "../../asserts/images";
+import { heroData } from "../../data/hero";
 
 const Feature = () => {
   return (
@@ -46,6 +46,16 @@ const Feature = () => {
         buttonText='Download app now'
         reverse
       />
+      <div className={styles.PrcessCta}>
+        <div className={styles.heroCtaButtons}>
+          <button className={styles.cta}>
+            <MdOutlineMarkUnreadChatAlt className={styles.ctaIcon} />
+            {heroData.ctaPrimary}
+          </button>
+          <button className={styles.demo}>{heroData.ctaSecondary}</button>
+        </div>
+        <p className={styles.reviewText}>{heroData.reviewText}</p>
+      </div>
     </section>
   );
 };
