@@ -1,0 +1,50 @@
+@use "../../styles/abstracts/mixin" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.pricingSection {
+  margin: 1rem;
+  padding: 7rem 2rem;
+  background-color: $color-darkblue;
+  border-radius: 30px;
+  color: white;
+
+  .heading {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .planButtonDiv {
+    @include flex-center;
+    margin-top: 20px;
+    .planWidthDiv {
+      padding: 0.5rem 1.5rem;
+      @include flex-center;
+      width: 40%;
+      max-width: 23%;
+      border: 1px solid $color-text-muted;
+      border-radius: 15px;
+      background-color: transparent;
+
+      .monthlybtn {
+        color: $color-secondary;
+        border: none;
+        padding: 10px 20px;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      .yearlybtn {
+        color: $color-secondary;
+        border: none;
+        padding: 10px 20px;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cardsDiv {
+    @include flex-center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+}

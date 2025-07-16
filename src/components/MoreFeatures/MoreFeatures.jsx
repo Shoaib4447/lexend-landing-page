@@ -9,7 +9,7 @@ const MoreFeatures = () => {
         {features.map((feature, index) => {
           const { Icon, title } = feature;
           return (
-            <div className={styles.feature}>
+            <div className={styles.feature} key={index}>
               <div className={styles.iconCircle}>
                 <Icon className={styles.Icon} />
               </div>

@@ -7,6 +7,7 @@ import Process from "./components/Process/Process";
 import Feature from "./components/Features/Feature";
 import About from "./components/About/About";
 import MoreFeatures from "./components/MoreFeatures/MoreFeatures";
+import Pricing from "./components/Pricing/Pricing";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Feature />
       <About />
       <MoreFeatures />
+      <Pricing />
     </>
   );
 };
