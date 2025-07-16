@@ -1,0 +1,124 @@
+@use "../../styles/abstracts/mixin" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.featureSection {
+  padding: 5rem 6rem;
+
+  @include respond(sm) {
+    padding: 3rem 1.5rem;
+  }
+}
+
+// 🔳 Main feature row layout
+.featureRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 6rem;
+
+  @include respond(sm) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+// 🔁 Reverse layout for alternate features
+.reverse {
+  flex-direction: row-reverse;
+
+  @include respond(sm) {
+    flex-direction: column;
+  }
+}
+
+.imageContainer {
+  flex: 1;
+
+  img {
+    width: 100%;
+    border-radius: 30px;
+  }
+
+  @include respond(sm) {
+    width: 100%;
+  }
+}
+
+.contentContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+
+  @include respond(sm) {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.iconWrapper {
+  background-color: $color-text-primary;
+  height: 45px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  svg {
+    color: $color-secondary;
+    font-size: 25px;
+  }
+}
+
+.heading {
+  font-size: 30px;
+  color: $color-text-secondary;
+
+  @include respond(sm) {
+    font-size: 24px;
+  }
+}
+
+.desc {
+  font-size: 18px;
+  padding-right: 6rem;
+  color: $color-text-muted;
+
+  @include respond(sm) {
+    font-size: 16px;
+    padding-right: 0;
+  }
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.5rem;
+
+  @include respond(sm) {
+    justify-content: center;
+  }
+
+  .arrowIcon {
+    color: $color-black;
+    font-size: 18px;
+  }
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 17px;
+  color: $color-text-primary;
+  font-weight: 600;
+
+  @include respond(sm) {
+    font-size: 16px;
+  }
+}
