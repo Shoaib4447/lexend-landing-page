@@ -9,6 +9,7 @@ import reviewImg4 from "../../asserts/04.png";
 import reviewImg5 from "../../asserts/06.png";
 import reviewImg6 from "../../asserts/08.png";
 import reviewImg7 from "../../asserts/09.png";
+import HeroCta from "./HeroCta";
 
 const Hero = () => {
   return (
@@ -19,14 +20,7 @@ const Hero = () => {
         <span className={styles.mainHeading}>Communicate Seamlessly</span>
       </h1>
       <p className={styles.description}>{heroData.description}</p>
-      <div className={styles.heroCtaButtons}>
-        <button className={styles.cta}>
-          <MdOutlineMarkUnreadChatAlt className={styles.ctaIcon} />
-          {heroData.ctaPrimary}
-        </button>
-        <button className={styles.demo}>{heroData.ctaSecondary}</button>
-      </div>
-      <p>{heroData.reviewText}</p>
+      <HeroCta />
       <div>
         <img
           className={styles.reviewImg1}

@@ -4,7 +4,6 @@
 .hero {
   position: relative;
   min-height: 90vh;
-  padding: 5rem 2rem;
   background-color: $color-primary;
   display: flex;
   flex-direction: column;
@@ -12,8 +11,8 @@
   align-items: center;
   gap: 30px;
   text-align: center;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
   h1 {
     font-family: $font-heading;
   }
@@ -38,32 +37,32 @@
 
   .reviewImg1 {
     position: absolute;
-    top: 50px;
+    top: 80px;
     right: 190px;
   }
   .reviewImg2 {
     position: absolute;
-    top: 50px;
+    top: 80px;
     left: 190px;
   }
   .reviewImg3 {
     position: absolute;
-    top: 270px;
-    left: 220px;
+    top: 290px;
+    left: 200px;
   }
   .reviewImg4 {
     position: absolute;
-    top: 270px;
-    right: 240px;
+    top: 290px;
+    right: 200px;
   }
   .reviewImg5 {
     position: absolute;
-    top: 80vh;
+    bottom: -20px;
     right: 40px;
   }
   .reviewImg6 {
     position: absolute;
-    top: 80vh;
+    bottom: -20px;
     left: 80px;
   }
 
@@ -72,12 +71,13 @@
     img {
       display: none;
     }
+    padding-bottom: 10rem;
   }
 }
 
 .heroText {
   font-family: $font-heading;
-  font-size: 70px;
+  font-size: 65px;
 
   @include respond(sm) {
     font-size: 35px;

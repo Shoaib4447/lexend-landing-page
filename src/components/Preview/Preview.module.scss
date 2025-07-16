@@ -1,0 +1,100 @@
+@use "../../styles/abstracts/mixin" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.previewSection {
+  position: relative;
+  padding: 2rem 0rem;
+
+  img {
+    object-fit: cover;
+    border-radius: 30px;
+    border: 2px solid $color-text-muted;
+  }
+
+  .mainImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .previewImageMain {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid $color-gray;
+    border-radius: 20px;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 32px rgba(0, 0, 0, 0.25); // soft shadow
+
+    @include respond(sm) {
+      width: 90%;
+      position: absolute;
+      top: -11rem;
+    }
+  }
+  .previewImageCall {
+    position: absolute;
+    width: 20%;
+    top: 10rem;
+    left: 60px;
+    border-radius: 20px;
+  }
+  .previewImagePhone {
+    position: absolute;
+    width: 25%;
+    bottom: 8rem;
+    right: 3rem;
+    border: 1px solid $color-gray;
+    border-radius: 10px;
+  }
+  .previewImageScan {
+    position: absolute;
+    width: 15%;
+    top: 8rem;
+    right: 5rem;
+    border: 1px solid $color-gray;
+    border-radius: 20px;
+  }
+
+  @include respond(sm) {
+    .previewImageCall,
+    .previewImagePhone,
+    .previewImageScan {
+      display: none;
+    }
+  }
+}
+
+.previewFeatures {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+
+  .previewFeaturesFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+    font-size: 16px;
+
+    img {
+      width: 40px;
+    }
+
+    @include respond(sm) {
+      img {
+        width: 25px;
+      }
+    }
+  }
+  @include respond(sm) {
+    flex-direction: column;
+    gap: 10px;
+
+    .cuttingIcon {
+      display: none;
+    }
+  }
+}

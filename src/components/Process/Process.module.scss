@@ -1,0 +1,68 @@
+@use "../../styles/abstracts/mixin" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.processSection {
+  padding: 4rem;
+  @include respond(sm) {
+    padding: 2rem;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color-text-muted;
+  background-color: $color-primary;
+  border-radius: 30px;
+
+  .PrcessCta {
+    // padding: 2rem;
+  }
+}
+
+.processImageCompnent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3rem;
+  @include respond(sm) {
+    flex-direction: column;
+  }
+}
+
+.processContainer {
+  padding: 2rem;
+  border-bottom: 1px solid $color-text-muted;
+  .card {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    // border-right: 1px solid $color-text-muted;
+  }
+
+  .processImage {
+    width: 70%;
+  }
+
+  .number {
+    width: 37px;
+    height: 37px;
+    border-radius: 56%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: $color-text-primary;
+  }
+
+  .title {
+    text-align: center;
+  }
+  .desc {
+    text-align: center;
+  }
+}
