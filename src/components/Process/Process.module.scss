@@ -66,3 +66,112 @@
     text-align: center;
   }
 }
+
+.PrcessCta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 2rem;
+
+  .heroCtaButtons {
+    @include flex-between;
+    gap: 20px;
+
+    @include respond(sm) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .cta {
+    padding: 10px 20px;
+    border: 2px solid $color-text-primary;
+    border-radius: 7px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 15px;
+    color: $color-text-primary;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-text-primary;
+      color: $color-secondary;
+    }
+
+    .ctaIcon {
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  .demo {
+    padding: $spacing-sm;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 15px;
+    color: $color-text-primary;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .heroCtaButtons {
+    @include flex-between;
+    gap: 20px;
+
+    @include respond(sm) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .cta {
+    padding: 10px 20px;
+    border: 2px solid $color-text-primary;
+    border-radius: 7px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 15px;
+    color: $color-text-primary;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-text-primary;
+      color: $color-secondary;
+    }
+
+    .ctaIcon {
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  .demo {
+    padding: $spacing-sm;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 15px;
+    color: $color-text-primary;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @include respond(sm) {
+    .reviewText {
+      text-align: center;
+    }
+  }
+}

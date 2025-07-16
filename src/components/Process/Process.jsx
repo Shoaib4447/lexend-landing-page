@@ -3,6 +3,8 @@ import stlyes from "../Hero/Hero.module.scss";
 import images from "../../asserts/images";
 import ProcessImage from "./ProcessImage";
 import HeroCta from "../Hero/HeroCta";
+import { heroData } from "../../data/hero";
+import { MdOutlineMarkUnreadChatAlt } from "react-icons/md";
 
 const Process = () => {
   return (
@@ -29,7 +31,14 @@ const Process = () => {
           />
         </div>
         <div className={styles.PrcessCta}>
-          <HeroCta />
+          <div className={styles.heroCtaButtons}>
+            <button className={styles.cta}>
+              <MdOutlineMarkUnreadChatAlt className={styles.ctaIcon} />
+              {heroData.ctaPrimary}
+            </button>
+            <button className={styles.demo}>{heroData.ctaSecondary}</button>
+          </div>
+          <p className={styles.reviewText}>{heroData.reviewText}</p>
         </div>
       </div>
     </section>
