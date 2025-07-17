@@ -7,44 +7,233 @@
   background-color: $color-darkblue;
   border-radius: 30px;
   color: white;
+  @include respond(sm) {
+    padding: 0rem 2rem;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    margin: 0rem;
+  }
 
   .heading {
     font-size: 60px;
     text-align: center;
+
+    @include respond(md) {
+      font-size: 45px;
+    }
+
+    @include respond(sm) {
+      font-size: 28px;
+      padding: 0rem 0rem;
+    }
   }
 
   .planButtonDiv {
     @include flex-center;
     margin-top: 20px;
+
     .planWidthDiv {
-      padding: 0.5rem 1.5rem;
+      padding: 3px;
       @include flex-center;
       width: 40%;
-      max-width: 23%;
+      max-width: 24%;
       border: 1px solid $color-text-muted;
       border-radius: 15px;
       background-color: transparent;
+      font-weight: bold;
+
+      @include respond(md) {
+        width: 60%;
+        max-width: 50%;
+      }
+
+      @include respond(sm) {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .monthlybtn,
+      .yearlybtn {
+        width: 50%;
+        padding: 12px 20px;
+        border-radius: 12px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+      }
 
       .monthlybtn {
         color: $color-secondary;
-        border: none;
-        padding: 10px 20px;
-        background-color: transparent;
-        cursor: pointer;
+        background-color: $color-text-primary;
       }
+
       .yearlybtn {
         color: $color-secondary;
-        border: none;
-        padding: 10px 20px;
         background-color: transparent;
-        cursor: pointer;
       }
     }
   }
 
   .cardsDiv {
-    @include flex-center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
-    margin-top: 20px;
+    margin-top: 4rem;
+
+    .cardBackgroundColor {
+      background-color: $color-primary !important;
+      color: $color-black !important;
+    }
+
+    .card {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 3rem 1rem;
+      // min-height: 28rem;
+      border: 1px solid $color-text-muted;
+      border-radius: 30px;
+      text-align: center;
+      background-color: #211e33;
+
+      @include respond(md) {
+        width: 45%;
+      }
+
+      @include respond(sm) {
+        width: 100%;
+      }
+
+      .pricingbox {
+        border-bottom: 1px solid red;
+      }
+
+      .planName {
+        border: 0.5px solid $color-text-muted;
+        border-radius: 30px;
+        padding: 10px 10px;
+        font-weight: bolder;
+      }
+
+      .planTag {
+        margin-top: 15px;
+        font-size: small;
+      }
+
+      .planPrice {
+        margin-top: 15px;
+      }
+
+      .priceValue {
+        font-size: 50px;
+        font-weight: 800;
+
+        @include respond(sm) {
+          font-size: 40px;
+        }
+      }
+
+      .pricePeriod,
+      .billingCycle {
+        font-size: smaller;
+      }
+
+      .featureSection {
+        margin-top: 20px;
+
+        .featureHeading {
+          font-weight: bold;
+          font-size: $font-heading;
+        }
+
+        .featureList {
+          list-style: none;
+
+          .featureItem {
+            margin-top: 10px;
+
+            .checkIcon {
+              margin-right: 10px;
+            }
+          }
+        }
+
+        .ctaButton {
+          background-color: $color-primary;
+          width: 100%;
+          padding: 1rem 1rem;
+          margin-top: 20px;
+          border-radius: 10px;
+          border: none;
+          font-weight: bold;
+        }
+
+        .ctaButtonHighlight {
+          background-color: $color-text-primary;
+          color: $color-secondary;
+        }
+      }
+    }
+  }
+
+  .statsWrapper {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+
+    .statsNote {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 1rem;
+    }
+
+    .statsFlex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0rem;
+
+      @include respond(sm) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding: 0;
+      }
+    }
+
+    .statItem {
+      font-size: 60px;
+      font-weight: 600;
+      color: #e5fdc5;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include respond(md) {
+        width: 45%;
+        font-size: 48px;
+      }
+
+      @include respond(sm) {
+        width: 33.33%;
+        font-size: 20px;
+        padding: 2rem 0rem;
+      }
+
+      .statpara {
+        font-size: small;
+        font-weight: lighter;
+        color: $color-secondary;
+      }
+    }
   }
 }
