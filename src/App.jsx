@@ -9,6 +9,7 @@ import MoreFeatures from "./components/MoreFeatures/MoreFeatures";
 import Pricing from "./components/Pricing/Pricing";
 import Reviews from "./components/Reviews/Reviews";
 import Faqs from "./components/Faqs/Faqs";
+import Companies from "./components/Companies/Companies";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Pricing />
       <Reviews />
       <Faqs />
+      <Companies />
     </>
   );
 };

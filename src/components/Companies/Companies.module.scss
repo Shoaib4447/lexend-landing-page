@@ -1,0 +1,32 @@
+@use "../../styles/abstracts/mixin" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.companySection {
+  padding: 2rem;
+  text-align: center;
+
+  .companyHeading {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .companyLogos {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .companyLogo {
+      width: 11%;
+
+      @include respond(md) {
+        width: 20%;
+      }
+
+      @include respond(sm) {
+        width: 30%;
+      }
+    }
+  }
+}
