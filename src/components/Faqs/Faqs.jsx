@@ -12,7 +12,7 @@ const Faqs = () => {
 
   return (
     <section className={styles.faqSection}>
-      <h3 className={styles.faqHeading}>FAQ</h3>
+      <h3 className={styles.faqHeading}>FAQ's</h3>
       {faqs.map((review, index) => {
         const { question, answer } = review;
         const isActive = activeIndex === index;
