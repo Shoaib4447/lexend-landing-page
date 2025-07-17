@@ -4,11 +4,27 @@
 .faqSection {
   padding: 4rem 13rem;
 
+  @include respond(md) {
+    padding: 3rem 6rem;
+  }
+
+  @include respond(sm) {
+    padding: 2rem 1.5rem;
+  }
+
   .faqHeading {
     font-size: 40px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 4rem;
+
+    @include respond(md) {
+      font-size: 32px;
+    }
+
+    @include respond(sm) {
+      font-size: 24px;
+    }
   }
 
   .faqItem {
@@ -16,6 +32,10 @@
     background-color: $color-primary;
     padding: 1.5rem 2rem;
     border-radius: 30px;
+
+    @include respond(sm) {
+      padding: 1rem 1.5rem;
+    }
 
     .faqQuestionRow {
       display: flex;
@@ -25,6 +45,10 @@
 
       .faqQuestion {
         font-size: 16px;
+
+        @include respond(sm) {
+          font-size: 14px;
+        }
       }
 
       .buttonWrapper {
@@ -34,10 +58,15 @@
         border-radius: 50%;
         background-color: rgb(255, 255, 255);
       }
+
       .faqToggleButton {
         background-color: transparent;
         border: none;
         font-size: 16px;
+
+        @include respond(sm) {
+          font-size: 14px;
+        }
       }
     }
 
