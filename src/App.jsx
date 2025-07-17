@@ -8,6 +8,7 @@ import About from "./components/About/About";
 import MoreFeatures from "./components/MoreFeatures/MoreFeatures";
 import Pricing from "./components/Pricing/Pricing";
 import Reviews from "./components/Reviews/Reviews";
+import Faqs from "./components/Faqs/Faqs";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <MoreFeatures />
       <Pricing />
       <Reviews />
+      <Faqs />
     </>
   );
 };

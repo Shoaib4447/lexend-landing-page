@@ -1,0 +1,58 @@
+@use "../../styles/abstracts/mixin" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.faqSection {
+  padding: 4rem 13rem;
+
+  .faqHeading {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .faqItem {
+    margin-top: 10px;
+    background-color: $color-primary;
+    padding: 1.5rem 2rem;
+    border-radius: 30px;
+
+    .faqQuestionRow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 20px;
+
+      .faqQuestion {
+        font-size: 16px;
+      }
+
+      .buttonWrapper {
+        @include flex-center;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+      }
+      .faqToggleButton {
+        background-color: transparent;
+        border: none;
+        font-size: 16px;
+      }
+    }
+
+    .faqAnswer {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      margin-top: 0;
+      transition: max-height 0.6s ease, opacity 0.4s ease, margin-top 0.4s ease;
+    }
+
+    .faqAnswerVisible {
+      max-height: 300px;
+      opacity: 1;
+      margin-top: 10px;
+    }
+  }
+}
