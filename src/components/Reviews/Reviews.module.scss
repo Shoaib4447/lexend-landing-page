@@ -1,0 +1,43 @@
+@use "../../styles/abstracts/mixin" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.testimonialSection {
+  padding: 7rem 13rem;
+  text-align: center;
+
+  @include respond(sm) {
+    padding: 10rem 3rem;
+  }
+
+  .testimonialHeading {
+    font-size: 4rem;
+    font-family: $font-heading;
+    line-height: 3.5rem;
+    @include respond(sm) {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  .testimonialImage {
+    width: 8%;
+    margin-top: 2rem;
+    border-radius: 50%;
+    @include respond(sm) {
+      width: 25%;
+    }
+  }
+
+  .testimonialQuote {
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: $font-body;
+  }
+
+  .testimonialName {
+    margin-top: 2rem;
+    font-weight: 800;
+    font-size: 25px;
+  }
+}

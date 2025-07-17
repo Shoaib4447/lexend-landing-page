@@ -1,4 +1,3 @@
-import React from "react";
 import "./styles/main.scss";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
@@ -8,6 +7,7 @@ import Feature from "./components/Features/Feature";
 import About from "./components/About/About";
 import MoreFeatures from "./components/MoreFeatures/MoreFeatures";
 import Pricing from "./components/Pricing/Pricing";
+import Reviews from "./components/Reviews/Reviews";
 
 const App = () => {
   return (
@@ -20,6 +20,7 @@ const App = () => {
       <About />
       <MoreFeatures />
       <Pricing />
+      <Reviews />
     </>
   );
 };
