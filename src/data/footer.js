@@ -1,19 +1,20 @@
+import { FaLinkedin, FaFacebookSquare } from "react-icons/fa";
+import { FaXTwitter, FaInstagram, FaYoutube } from "react-icons/fa6";
 export const footer = {
-  logo: "/logo-white.svg",
   description:
-    "Lexend is your all-in-one solution for modern communication and collaboration.",
+    "Connect Instantly, Communicate Seamlessly, Stay connected with friends, family, and colleagues anywhere in the world.",
   links: {
-    product: [
+    Product: [
       { label: "Features", href: "#" },
       { label: "Integrations", href: "#" },
       { label: "Pricing", href: "#" },
     ],
-    company: [
+    Company: [
       { label: "About", href: "#" },
       { label: "Careers", href: "#" },
       { label: "Blog", href: "#" },
     ],
-    support: [
+    Support: [
       { label: "Help Center", href: "#" },
       { label: "Contact", href: "#" },
       { label: "Security", href: "#" },
@@ -21,4 +22,11 @@ export const footer = {
   },
   copyright:
     "© 2025 Lexend. All rights reserved. | Privacy Policy | Terms of Service",
+  socials: [
+    { Icon: FaLinkedin },
+    { Icon: FaFacebookSquare },
+    { Icon: FaXTwitter },
+    { Icon: FaInstagram },
+    { Icon: FaYoutube },
+  ],
 };
