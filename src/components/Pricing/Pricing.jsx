@@ -11,6 +11,7 @@ const Pricing = () => {
       <div className={styles.planButtonDiv}>
         <div className={styles.planWidthDiv}>
           <button className={styles.monthlybtn}>Pay Monthly</button>
+
           <button className={styles.yearlybtn}>Pay Yearly</button>
         </div>
       </div>
