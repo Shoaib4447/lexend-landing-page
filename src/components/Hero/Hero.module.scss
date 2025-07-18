@@ -98,7 +98,7 @@
 }
 
 .heroCtaButtons {
-  @include flex-between;
+  @include flex-center;
   gap: 20px;
 
   @include respond(sm) {
@@ -143,4 +143,9 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.reviewText {
+  text-align: center;
+  margin-top: 20px;
 }

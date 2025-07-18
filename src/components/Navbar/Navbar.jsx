@@ -3,6 +3,7 @@ import styles from "./Navbar.module.scss";
 import logo from "../../asserts/logo.svg";
 import { FaBars, FaGlobe, FaTimes } from "react-icons/fa";
 import { useState } from "react";
+import Button from "../Button/Button";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -54,7 +55,7 @@ const Navbar = () => {
 
         <div className={styles.navActions}>
           <FaGlobe />
-          <button type='button'>{navigation.buttons.download.label}</button>
+          <Button variant='solid'>Download App</Button>
         </div>
       </div>
     </nav>

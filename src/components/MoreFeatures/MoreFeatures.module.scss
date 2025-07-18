@@ -30,6 +30,10 @@
       border-radius: 50px;
       margin: 10px;
 
+      opacity: 0;
+      animation: fadeUp 0.6s ease-out forwards;
+      animation-delay: 0.2s;
+
       @include respond(sm) {
         width: 100%;
         padding: 1rem 0.5rem;
@@ -51,6 +55,17 @@
       .Icon {
         color: $color-secondary;
         font-size: 25px;
+      }
+    }
+
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   }

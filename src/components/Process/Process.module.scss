@@ -2,9 +2,10 @@
 @use "../../styles/abstracts/variables" as *;
 
 .processSection {
-  padding: 4rem;
+  margin: 4rem;
   @include respond(sm) {
-    padding: 2rem;
+    padding: 1rem;
+    margin: 0px;
   }
 }
 
@@ -40,6 +41,11 @@
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+  }
+
+  @include respond(sm) {
+    // gap: 0.5rem;
+    padding: 3rem 0rem !important;
   }
 
   .borderRight {

@@ -7,10 +7,18 @@
   padding: 8rem 4rem;
   border-radius: 30px;
 
+  @include respond(sm) {
+    padding: 2rem 1rem;
+  }
+
   .insights__title {
     text-align: center;
     font-size: 70px;
     letter-spacing: -4px;
+    @include respond(sm) {
+      font-size: 35px;
+      letter-spacing: -1px;
+    }
   }
 
   .blogFlex {
@@ -57,8 +65,9 @@
         background-color: transparent;
         color: $color-text-primary;
         padding: 0.6rem 1.2rem;
-        font-size: 0.95rem;
-        font-weight: 500;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
         border: none;
         border-radius: 0.5rem;
         cursor: pointer;

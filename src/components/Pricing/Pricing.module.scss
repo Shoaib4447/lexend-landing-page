@@ -81,6 +81,17 @@
     gap: 30px;
     margin-top: 4rem;
 
+    @include respond(sm) {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
     .cardBackgroundColor {
       background-color: $color-primary !important;
       color: $color-black !important;
@@ -99,13 +110,18 @@
       text-align: center;
       background-color: #211e33;
       height: fit-content;
+      opacity: 0;
+      animation: fadeUp 0.6s ease-out forwards;
+      animation-delay: 0.2s;
 
       @include respond(md) {
         width: 45%;
       }
 
       @include respond(sm) {
-        width: 100%;
+        width: 80%;
+        flex: 0 0 auto;
+        scroll-snap-align: start;
       }
 
       .pricingbox {
@@ -199,6 +215,9 @@
       justify-content: center;
       align-items: center;
       padding: 1rem 0rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease-out forwards;
+      animation-delay: 0.2s;
 
       @include respond(sm) {
         flex-wrap: nowrap;
@@ -237,5 +256,16 @@
         color: $color-secondary;
       }
     }
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

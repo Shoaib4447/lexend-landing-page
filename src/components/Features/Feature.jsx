@@ -6,6 +6,7 @@ import { MdOutlineVideoCall, MdOutlineMarkUnreadChatAlt } from "react-icons/md";
 import { TfiReload } from "react-icons/tfi";
 import images from "../../asserts/images";
 import { heroData } from "../../data/hero";
+import HeroCta from "../Hero/HeroCta";
 
 const Feature = () => {
   return (
@@ -46,7 +47,8 @@ const Feature = () => {
         buttonText='Download app now'
         reverse
       />
-      <div className={styles.PrcessCta}>
+      <HeroCta primaryVariant='solid' />
+      {/* <div className={styles.PrcessCta}>
         <div className={styles.heroCtaButtons}>
           <button className={styles.cta}>
             <MdOutlineMarkUnreadChatAlt className={styles.ctaIcon} />
@@ -55,7 +57,7 @@ const Feature = () => {
           <button className={styles.demo}>{heroData.ctaSecondary}</button>
         </div>
         <p className={styles.reviewText}>{heroData.reviewText}</p>
-      </div>
+      </div> */}
     </section>
   );
 };

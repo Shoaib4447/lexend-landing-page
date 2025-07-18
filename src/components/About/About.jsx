@@ -1,6 +1,6 @@
 import styles from "./About.module.scss";
 import images from "../../asserts/images";
-
+import Button from "../Button/Button";
 const About = () => {
   return (
     <section className={styles.aboutSection}>

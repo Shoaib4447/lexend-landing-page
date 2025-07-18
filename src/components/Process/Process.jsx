@@ -31,6 +31,9 @@ const Process = () => {
           />
         </div>
         <div className={styles.PrcessCta}>
+          <HeroCta primaryVariant='solid' secondaryVariant='text' />
+        </div>
+        {/* <div className={styles.PrcessCta}>
           <div className={styles.heroCtaButtons}>
             <button className={styles.cta}>
               <MdOutlineMarkUnreadChatAlt className={styles.ctaIcon} />
@@ -39,7 +42,7 @@ const Process = () => {
             <button className={styles.demo}>{heroData.ctaSecondary}</button>
           </div>
           <p className={styles.reviewText}>{heroData.reviewText}</p>
-        </div>
+        </div> */}
       </div>
     </section>
   );
