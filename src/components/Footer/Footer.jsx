@@ -6,6 +6,33 @@ const Footer = () => {
   return (
     <section className={styles.footerSection}>
       {/* Top Section */}
+
+      {/* CTA */}
+      <div className={styles.cta}>
+        <div className={styles.ctaText}>
+          <h3 className={styles.ctaHeading}>Stay up to date!</h3>
+          <p className={styles.ctaDescription}>
+            Subscribe to our latest news, announcements, and articles.
+          </p>
+        </div>
+
+        <div className={styles.ctaFormWrapper}>
+          <form className={styles.ctaForm}>
+            <div className={styles.inputWrapper}>
+              <input
+                type='email'
+                placeholder='Your email..'
+                className={styles.ctaInput}
+              />
+            </div>
+            <div className={styles.formButtonWrapper}>
+              <button className={styles.ctaButton}>Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      {/* Brand */}
       <div className={styles.footerTop}>
         <div className={styles.footerBrand}>
           <img
@@ -14,15 +41,27 @@ const Footer = () => {
             className={styles.footerLogo}
           />
           <p className={styles.footerDescription}>{footer.description}</p>
+
+          <div className={styles.languageSelector}>
+            <p className={styles.languageIcon}>
+              <footer.language.icon />
+            </p>
+            <p className={styles.languageLabel}>{footer.language.label}</p>
+            <span className={styles.languageDropdown}>
+              <footer.language.dropdown />
+            </span>
+          </div>
         </div>
 
         {/* Footer Columns */}
         <div className={styles.footerLinks}>
-          {Object.entries(footer.links).map(([title, items], idx) => (
+          {footer.links.map((section, idx) => (
             <div className={styles.footerColumn} key={idx}>
-              <h4 className={styles.footerColumnTitle}>{title}</h4>
+              {section.title && (
+                <h4 className={styles.footerColumnTitle}>{section.title}</h4>
+              )}
               <ul className={styles.footerList}>
-                {items.map((link, i) => (
+                {section.items.map((link, i) => (
                   <li key={i}>
                     <a href={link.href} className={styles.footerLink}>
                       {link.label}

@@ -10,6 +10,7 @@ import Pricing from "./components/Pricing/Pricing";
 import Reviews from "./components/Reviews/Reviews";
 import Faqs from "./components/Faqs/Faqs";
 import Companies from "./components/Companies/Companies";
+import Blogs from "./components/Blogs/Blogs";
 import Footer from "./components/footer/footer";
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
       <Reviews />
       <Faqs />
       <Companies />
+      <Blogs />
       <Footer />
     </>
   );
