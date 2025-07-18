@@ -21,7 +21,8 @@
     padding: 20px;
 
     .feature {
-      @include flex-center;
+      display: flex;
+      align-items: center;
       background-color: $color-primary;
       gap: 10px;
       width: 27%;

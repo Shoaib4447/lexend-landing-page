@@ -11,7 +11,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  border: 1px solid $color-text-muted;
+  border: 1px solid #bcbcbc7a;
   background-color: $color-primary;
   border-radius: 30px;
 
@@ -31,17 +31,19 @@
 }
 
 .processContainer {
-  padding: 2rem;
-  border-bottom: 1px solid $color-text-muted;
+  // padding: 2rem;
+  border-bottom: 1px solid #bcbcbc7a;
   .card {
-    padding-top: 2rem;
-    padding-bottom: 3rem;
+    padding: 7rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    // border-right: 1px solid $color-text-muted;
+    gap: 1.5rem;
+  }
+
+  .borderRight {
+    border-right: 1px solid #bcbcbc7a;
   }
 
   .processImage {
