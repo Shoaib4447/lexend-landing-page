@@ -98,6 +98,7 @@
       border-radius: 30px;
       text-align: center;
       background-color: #211e33;
+      height: fit-content;
 
       @include respond(md) {
         width: 45%;
@@ -114,7 +115,8 @@
       .planName {
         border: 0.5px solid $color-text-muted;
         border-radius: 30px;
-        padding: 10px 10px;
+
+        padding: 2px 10px;
         font-weight: bolder;
       }
 
