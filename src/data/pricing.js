@@ -2,7 +2,8 @@ export const pricingPlans = [
   {
     name: "Starter",
     tag: "For individuals, freelancers",
-    price: "24",
+    priceMonthly: "24",
+    priceYearly: "114",
     period: "month",
     billing: "Billed once monthly",
     features: ["Fast and Reliable", "Discover Data Everywhere"],
@@ -12,7 +13,8 @@ export const pricingPlans = [
   {
     name: "Pro",
     tag: "For startups, agencies",
-    price: "48",
+    priceMonthly: "48",
+    priceYearly: "288",
     period: "month",
     billing: "Billed once monthly",
     features: [
@@ -27,7 +29,8 @@ export const pricingPlans = [
   {
     name: "Business",
     tag: "For large business, companies",
-    price: "64",
+    priceMonthly: "64",
+    priceYearly: "384",
     period: "month",
     billing: "Billed once monthly",
     features: [

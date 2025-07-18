@@ -52,24 +52,20 @@
         max-width: 100%;
       }
 
-      .monthlybtn,
-      .yearlybtn {
+      .toggleBtn {
         width: 50%;
         padding: 12px 20px;
         border-radius: 12px;
         font-weight: bold;
         border: none;
         cursor: pointer;
-      }
-
-      .monthlybtn {
-        color: $color-secondary;
-        background-color: $color-text-primary;
-      }
-
-      .yearlybtn {
         color: $color-secondary;
         background-color: transparent;
+        transition: 0.3s;
+      }
+
+      .activeBtn {
+        background-color: $color-text-primary;
       }
     }
   }

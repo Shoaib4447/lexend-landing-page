@@ -1,8 +1,11 @@
 import styles from "./Pricing.module.scss";
 import { pricingPlans } from "../../data/pricing";
 import { IoMdCheckmark } from "react-icons/io";
+import { useState } from "react";
 
 const Pricing = () => {
+  const [paymentPlanBtn, setPaymentPlanBtn] = useState(false);
+
   return (
     <section className={styles.pricingSection}>
       <h1 className={styles.heading}>
@@ -10,57 +13,80 @@ const Pricing = () => {
       </h1>
       <div className={styles.planButtonDiv}>
         <div className={styles.planWidthDiv}>
-          <button className={styles.monthlybtn}>Pay Monthly</button>
+          <button
+            className={`${styles.toggleBtn} ${
+              !paymentPlanBtn ? styles.activeBtn : ""
+            }`}
+            onClick={() => setPaymentPlanBtn(false)}
+          >
+            Pay Monthly
+          </button>
 
-          <button className={styles.yearlybtn}>Pay Yearly</button>
+          <button
+            className={`${styles.toggleBtn} ${
+              paymentPlanBtn ? styles.activeBtn : ""
+            }`}
+            onClick={() => setPaymentPlanBtn(true)}
+          >
+            Pay Yearly
+          </button>
         </div>
       </div>
       <div className={styles.cardsDiv}>
         {pricingPlans.map((plan, index) => {
-          const { name, tag, price, period, billing, features, cta, note } =
-            plan;
+          const {
+            name,
+            tag,
+            priceMonthly,
+            priceYearly,
+            period,
+            billing,
+            features,
+            cta,
+            note,
+          } = plan;
           return (
-            <>
-              <div
-                className={`${
-                  index === 1
-                    ? `${styles.cardBackgroundColor} ${styles.card}`
-                    : styles.card
-                }`}
-                key={index}
-              >
-                <div className={styles.pricingBox}>
-                  <p className={styles.planName}>{name}</p>
-                  <p className={styles.planTag}>{tag}</p>
-                  <p className={styles.planPrice}>
-                    <span className={styles.priceValue}>${price}</span>
-                    <span className={styles.pricePeriod}> /{period}</span>
-                  </p>
-                  <p className={styles.billingCycle}>{billing}</p>
-                </div>
-
-                <div className={styles.featureSection}>
-                  <p className={styles.featureHeading}>Standout features</p>
-                  <ul className={styles.featureList}>
-                    {features.map((feature, index) => (
-                      <li key={index} className={styles.featureItem}>
-                        <IoMdCheckmark className={styles.checkIcon} />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <button
-                    className={`${styles.ctaButton} ${
-                      index === 1 ? styles.ctaButtonHighlight : ""
-                    }`}
-                  >
-                    {cta}
-                  </button>
-                  <p className={styles.note}> {note}</p>
-                </div>
+            <div
+              key={index}
+              className={`${
+                index === 1
+                  ? `${styles.cardBackgroundColor} ${styles.card}`
+                  : styles.card
+              }`}
+            >
+              <div className={styles.pricingBox}>
+                <p className={styles.planName}>{name}</p>
+                <p className={styles.planTag}>{tag}</p>
+                <p className={styles.planPrice}>
+                  <span className={styles.priceValue}>
+                    ${paymentPlanBtn ? plan.priceYearly : plan.priceMonthly}
+                  </span>
+                  <span className={styles.pricePeriod}> /{period}</span>
+                </p>
+                <p className={styles.billingCycle}>{billing}</p>
               </div>
-            </>
+
+              <div className={styles.featureSection}>
+                <p className={styles.featureHeading}>Standout features</p>
+                <ul className={styles.featureList}>
+                  {features.map((feature, index) => (
+                    <li key={index} className={styles.featureItem}>
+                      <IoMdCheckmark className={styles.checkIcon} />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <button
+                  className={`${styles.ctaButton} ${
+                    index === 1 ? styles.ctaButtonHighlight : ""
+                  }`}
+                >
+                  {cta}
+                </button>
+                <p className={styles.note}> {note}</p>
+              </div>
+            </div>
           );
         })}
       </div>
