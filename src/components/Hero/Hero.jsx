@@ -1,7 +1,5 @@
 import styles from "./Hero.module.scss";
 import { heroData } from "../../data/hero";
-import { MdOutlineMarkUnreadChatAlt } from "react-icons/md";
-import Button from "../Button/Button";
 import reviewImg1 from "../../asserts/01.png";
 import reviewImg2 from "../../asserts/02.png";
 import reviewImg3 from "../../asserts/03.png";

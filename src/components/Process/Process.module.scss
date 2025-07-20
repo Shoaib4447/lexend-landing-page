@@ -15,25 +15,35 @@
   border: 1px solid #bcbcbc7a;
   background-color: $color-primary;
   border-radius: 30px;
-
-  .PrcessCta {
-    // padding: 2rem;
-  }
 }
 
 .processImageCompnent {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 3rem;
   @include respond(sm) {
-    flex-direction: column;
+    // flex-direction: column;
+  }
+  @include respond(md) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
 .processContainer {
-  // padding: 2rem;
   border-bottom: 1px solid #bcbcbc7a;
+
+  @include respond(sm) {
+    .processContainer {
+      width: 100%;
+    }
+  }
+  @include respond(md) {
+    .processContainer {
+      width: 30%;
+    }
+  }
   .card {
     padding: 7rem 2rem;
     display: flex;
@@ -41,15 +51,24 @@
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-  }
 
-  @include respond(sm) {
-    // gap: 0.5rem;
-    padding: 3rem 0rem !important;
+    @include respond(sm) {
+      padding: 3rem 1rem;
+      gap: 1rem;
+    }
+    @include respond(md) {
+      padding: 3rem 1rem;
+      gap: 1rem;
+    }
   }
 
   .borderRight {
     border-right: 1px solid #bcbcbc7a;
+    @include respond(sm) {
+      .border-right {
+        border-right: 0px solid transparent;
+      }
+    }
   }
 
   .processImage {

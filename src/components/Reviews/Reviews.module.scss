@@ -8,6 +8,10 @@
   @include respond(sm) {
     padding: 2rem 3rem;
   }
+  @include respond(md) {
+    margin-top: 3rem;
+    padding: 2rem 3rem;
+  }
 
   .testimonialHeading {
     font-size: 4rem;

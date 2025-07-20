@@ -79,13 +79,11 @@
 
     @include respond(sm) {
       flex-wrap: nowrap;
-      overflow-x: auto;
-      padding-bottom: 1rem;
-      scroll-snap-type: x mandatory;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
+      width: 100%;
+    }
+    @include respond(md) {
+      flex-wrap: nowrap;
+      width: 100%;
     }
 
     .cardBackgroundColor {
@@ -94,13 +92,11 @@
     }
 
     .card {
-      width: 30%;
+      width: 90%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
       padding: 3rem 1rem;
-      // min-height: 28rem;
       border: 1px solid $color-text-muted;
       border-radius: 30px;
       text-align: center;
@@ -111,13 +107,12 @@
       animation-delay: 0.2s;
 
       @include respond(md) {
-        width: 45%;
+        width: 100%;
       }
 
       @include respond(sm) {
-        width: 80%;
+        width: 100%;
         flex: 0 0 auto;
-        scroll-snap-align: start;
       }
 
       .pricingbox {
@@ -216,6 +211,12 @@
       animation-delay: 0.2s;
 
       @include respond(sm) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding: 0;
+      }
+      @include respond(md) {
         flex-wrap: nowrap;
         justify-content: space-between;
         gap: 0.5rem;

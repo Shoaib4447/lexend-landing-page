@@ -1,10 +1,7 @@
 import styles from "./Process.module.scss";
-import stlyes from "../Hero/Hero.module.scss";
 import images from "../../asserts/images";
 import ProcessImage from "./ProcessImage";
 import HeroCta from "../Hero/HeroCta";
-import { heroData } from "../../data/hero";
-import { MdOutlineMarkUnreadChatAlt } from "react-icons/md";
 
 const Process = () => {
   return (

@@ -1,6 +1,6 @@
+import styles from "./Footer.module.scss";
 import { footer } from "../../data/footer";
 import images from "../../asserts/images";
-import styles from "./Footer.module.scss";
 
 const Footer = () => {
   return (

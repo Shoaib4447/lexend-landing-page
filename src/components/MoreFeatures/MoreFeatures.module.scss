@@ -20,6 +20,11 @@
     margin-top: 20px;
     padding: 20px;
 
+    @include respond(sm) {
+      padding: 20px;
+      margin-top: 15px;
+    }
+
     .feature {
       display: flex;
       align-items: center;
@@ -36,7 +41,9 @@
 
       @include respond(sm) {
         width: 100%;
-        padding: 1rem 0.5rem;
+      }
+      @include respond(md) {
+        width: 100%;
       }
 
       &:hover {

@@ -2,6 +2,12 @@ import styles from "./Pricing.module.scss";
 import { pricingPlans } from "../../data/pricing";
 import { IoMdCheckmark } from "react-icons/io";
 import { useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
 
 const Pricing = () => {
   const [paymentPlanBtn, setPaymentPlanBtn] = useState(false);
@@ -33,62 +39,67 @@ const Pricing = () => {
         </div>
       </div>
       <div className={styles.cardsDiv}>
-        {pricingPlans.map((plan, index) => {
-          const {
-            name,
-            tag,
-            priceMonthly,
-            priceYearly,
-            period,
-            billing,
-            features,
-            cta,
-            note,
-          } = plan;
-          return (
-            <div
-              key={index}
-              className={`${
-                index === 1
-                  ? `${styles.cardBackgroundColor} ${styles.card}`
-                  : styles.card
-              }`}
-            >
-              <div className={styles.pricingBox}>
-                <p className={styles.planName}>{name}</p>
-                <p className={styles.planTag}>{tag}</p>
-                <p className={styles.planPrice}>
-                  <span className={styles.priceValue}>
-                    ${paymentPlanBtn ? plan.priceYearly : plan.priceMonthly}
-                  </span>
-                  <span className={styles.pricePeriod}> /{period}</span>
-                </p>
-                <p className={styles.billingCycle}>{billing}</p>
-              </div>
-
-              <div className={styles.featureSection}>
-                <p className={styles.featureHeading}>Standout features</p>
-                <ul className={styles.featureList}>
-                  {features.map((feature, index) => (
-                    <li key={index} className={styles.featureItem}>
-                      <IoMdCheckmark className={styles.checkIcon} />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  className={`${styles.ctaButton} ${
-                    index === 1 ? styles.ctaButtonHighlight : ""
+        <Swiper
+          className='mySwiper'
+          spaceBetween={20}
+          pagination={{ clickable: true }}
+          slidesPerView={1.2}
+          breakpoints={{
+            768: {
+              slidesPerView: 3, // For tablets and above
+              allowTouchMove: false, // Disable swipe on desktop
+            },
+          }}
+          modules={[]}
+        >
+          {pricingPlans.map((plan, index) => {
+            const { name, tag, period, billing, features, cta, note } = plan;
+            return (
+              <SwiperSlide key={index}>
+                <div
+                  className={`${
+                    index === 1
+                      ? `${styles.cardBackgroundColor} ${styles.card}`
+                      : styles.card
                   }`}
                 >
-                  {cta}
-                </button>
-                <p className={styles.note}> {note}</p>
-              </div>
-            </div>
-          );
-        })}
+                  <div className={styles.pricingBox}>
+                    <p className={styles.planName}>{name}</p>
+                    <p className={styles.planTag}>{tag}</p>
+                    <p className={styles.planPrice}>
+                      <span className={styles.priceValue}>
+                        ${paymentPlanBtn ? plan.priceYearly : plan.priceMonthly}
+                      </span>
+                      <span className={styles.pricePeriod}> /{period}</span>
+                    </p>
+                    <p className={styles.billingCycle}>{billing}</p>
+                  </div>
+
+                  <div className={styles.featureSection}>
+                    <p className={styles.featureHeading}>Standout features</p>
+                    <ul className={styles.featureList}>
+                      {features.map((feature, index) => (
+                        <li key={index} className={styles.featureItem}>
+                          <IoMdCheckmark className={styles.checkIcon} />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <button
+                      className={`${styles.ctaButton} ${
+                        index === 1 ? styles.ctaButtonHighlight : ""
+                      }`}
+                    >
+                      {cta}
+                    </button>
+                    <p className={styles.note}> {note}</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
       <div className={styles.statsWrapper}>
         <p className={styles.statsNote}>

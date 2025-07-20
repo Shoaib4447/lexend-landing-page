@@ -29,7 +29,12 @@
     @include respond(sm) {
       width: 90%;
       position: absolute;
-      top: -11rem;
+      top: -9rem;
+    }
+    @include respond(md) {
+      width: 90%;
+      position: absolute;
+      top: -19rem;
     }
   }
   .previewImageCall {
@@ -63,6 +68,13 @@
       display: none;
     }
   }
+  @include respond(md) {
+    .previewImageCall,
+    .previewImagePhone,
+    .previewImageScan {
+      display: none;
+    }
+  }
 }
 
 .previewFeatures {
@@ -89,12 +101,14 @@
       }
     }
   }
+
   @include respond(sm) {
     flex-direction: column;
+    padding: 2rem 2rem;
     gap: 10px;
-
     .cuttingIcon {
       display: none;
     }
   }
+  
 }

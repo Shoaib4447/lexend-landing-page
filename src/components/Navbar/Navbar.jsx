@@ -33,7 +33,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className={styles.navActions}>
-            <FaGlobe />
+            <FaGlobe className={styles.faGlobeIcon} />
             <button type='button'>{navigation.buttons.download.label}</button>
           </div>
         </div>

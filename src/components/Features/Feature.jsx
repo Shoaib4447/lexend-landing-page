@@ -2,10 +2,9 @@ import styles from "./Feature.module.scss";
 import FeatureComponent from "./FeatureCompnent";
 import { TbMessage } from "react-icons/tb";
 import { FaShieldHalved } from "react-icons/fa6";
-import { MdOutlineVideoCall, MdOutlineMarkUnreadChatAlt } from "react-icons/md";
+import { MdOutlineVideoCall } from "react-icons/md";
 import { TfiReload } from "react-icons/tfi";
 import images from "../../asserts/images";
-import { heroData } from "../../data/hero";
 import HeroCta from "../Hero/HeroCta";
 
 const Feature = () => {
